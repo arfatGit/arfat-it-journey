@@ -2,23 +2,23 @@
 
 ## What is a database?
 
-A database is set of related data represented in tables.
+A database is a collection of related data, usually organized into tables.
 
 ## What is a table?
 
-A table is consists of related data represented in rows and columns.
+A table stores related data in rows and columns.
 
 ## What is a row?
 
-A row also known as record is every entry of data in the table.
+A row, also called a record, represents one entry in a table.
 
 ## What is a column?
 
-A column is a group of data of same type
+A column represents one type/category of data in a table, such as name, department, or role.
 
 ## What is a primary key?
 
-A primary key is a unique data in a table that is used to filter data and is known as a target for the foreign key in another table. It can't be null.
+A primary key is a column, or group of columns, that uniquely identifies each row in a table. It cannot be null, and it can be referenced by a foreign key in another table.
 
 ## Example Employee Table
 
@@ -39,3 +39,12 @@ WHERE department = 'IT';
 
 SELECT \* FROM employees
 ORDER BY name;
+
+## What I Learned
+
+- A database stores related data in tables.
+- A table is made of rows and columns.
+- A primary key uniquely identifies each row.
+- SELECT is used to choose data from a table.
+- WHERE is used to filter records.
+- ORDER BY is used to sort results.
