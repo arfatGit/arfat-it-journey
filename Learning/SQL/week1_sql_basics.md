@@ -22,13 +22,13 @@ A primary key is a column, or group of columns, that uniquely identifies each ro
 
 ## Example Employee Table
 
-| employee_id | name    | department | role            |
-| ----------- | ------- | ---------- | --------------- |
-| 1           | Arfatul | IT         | Support Analyst |
-| 2           | Sara    | HR         | Manager         |
-| 3           | David   | Finance    | Analyst         |
-
-## Practice Queries
+| employee_id | name    | department | role            | city     |
+| ----------- | ------- | ---------- | --------------- | -------- |
+| 1           | Arfatul | IT         | Support Analyst | Ottawa   |
+| 2           | Sara    | HR         | Manager         | Toronto  |
+| 3           | David   | Finance    | Analyst         | Ottawa   |
+| 4           | Nina    | IT         | Developer       | Ottawa   |
+| 5           | Omar    | Operations | Coordinator     | Montreal |
 
 SELECT \* FROM employees;
 
@@ -38,7 +38,13 @@ SELECT \* FROM employees
 WHERE department = 'IT';
 
 SELECT \* FROM employees
+WHERE city = 'Ottawa';
+
+SELECT \* FROM employees
 ORDER BY name;
+
+SELECT \* FROM employees
+ORDER BY department;
 
 ## What I Learned
 
