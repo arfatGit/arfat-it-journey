@@ -46,6 +46,54 @@ ORDER BY name;
 SELECT \* FROM employees
 ORDER BY department;
 
+## Application Support Use Case
+
+In an application support role, SQL can help investigate issues such as:
+
+- finding a user's account
+- checking ticket status
+- finding incomplete records
+- checking which department submitted the most tickets
+- identifying old unresolved tickets
+
+Example:
+
+SELECT \* FROM tickets
+WHERE status = 'Open';
+
+SELECT \* FROM tickets
+WHERE priority = 'High'
+ORDER BY created_date;
+
+## Example Table: tickets
+
+| ticket_id | user_name | department | category       | priority | status      | created_date |
+| --------- | --------- | ---------- | -------------- | -------- | ----------- | ------------ |
+| 101       | Sara      | HR         | Login          | High     | Open        | 2026-06-20   |
+| 102       | David     | Finance    | Report Error   | Medium   | In Progress | 2026-06-21   |
+| 103       | Nina      | IT         | Access Request | Low      | Closed      | 2026-06-22   |
+| 104       | Omar      | Operations | System Error   | High     | Open        | 2026-06-19   |
+
+### Practice queries
+
+-- Show all open tickets
+SELECT \* FROM tickets
+WHERE status = 'Open';
+
+-- Show high priority tickets
+SELECT \* FROM tickets
+WHERE priority = 'High';
+
+-- Show tickets from HR
+SELECT \* FROM tickets
+WHERE department = 'HR';
+
+-- Show tickets ordered by created date
+SELECT \* FROM tickets
+ORDER BY created_date;
+-- Show only ticket_id, user_name, and status
+SELECT ticket_id, user_name, status FROM tickets;
+
 ## What I Learned
 
 - A database stores related data in tables.
