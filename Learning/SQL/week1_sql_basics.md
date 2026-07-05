@@ -77,20 +77,25 @@ ORDER BY created_date;
 ### Practice queries
 
 -- Show all open tickets
+
 SELECT \* FROM tickets
 WHERE status = 'Open';
 
 -- Show high priority tickets
+
 SELECT \* FROM tickets
 WHERE priority = 'High';
 
 -- Show tickets from HR
+
 SELECT \* FROM tickets
 WHERE department = 'HR';
 
 -- Show tickets ordered by created date
+
 SELECT \* FROM tickets
 ORDER BY created_date;
+
 -- Show only ticket_id, user_name, and status
 SELECT ticket_id, user_name, status FROM tickets;
 
